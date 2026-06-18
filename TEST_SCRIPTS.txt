@@ -1,0 +1,29 @@
+ChronoSync - Project Validation Scripts
+
+PowerShell
+
+1) Restore and build the solution
+
+dotnet restore .\ChronoSync.sln
+dotnet build .\ChronoSync.sln
+
+2) Run the application
+
+dotnet run --project .\src\ChronoSync\ChronoSync.csproj
+
+3) Optional release publish
+
+dotnet publish .\src\ChronoSync\ChronoSync.csproj -c Release -o .\artifacts\publish
+
+4) Full local validation sequence
+
+dotnet restore .\ChronoSync.sln
+dotnet build .\ChronoSync.sln
+dotnet run --project .\src\ChronoSync\ChronoSync.csproj
+
+Notes
+
+- The application reads configuration from .\src\ChronoSync\appsettings.json.
+- To test end-to-end against Luma, the settings file must contain valid Username, Email, BaseUrl, and Level.
+- Level = 2 enables the stronger solar-wind scenario.
+- If the API is unreachable or returns an expired/invalid context, rerun the application so it can start a new test context.
