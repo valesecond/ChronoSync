@@ -81,7 +81,6 @@ See [TEST_SCRIPTS.txt](TEST_SCRIPTS.txt) for the copy-ready command list to vali
 - The app uses `DateTimeOffset.UtcNow.Ticks` as the canonical timestamp source.
 - `ProbeUnreachable` waits 5 seconds before retrying.
 - Time dilation is supported through the optional `timeDilationFactor` field.
-- This repository should remain private unless the challenge instructions say otherwise.
 
 ---
 
